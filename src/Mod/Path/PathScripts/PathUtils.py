@@ -263,9 +263,9 @@ def SortPath(wire,Side,radius,clockwise,firstedge=None,SegLen =0.5):
         elif geomType(e) == "Line":
             edgelist.append(e)
         elif geomType(e) == "BSplineCurve" or \
-                 geomType(e) == "BezierCurve" or \
-                 geomType(e) == "Ellipse":
-                 edgelist.append(Part.Wire(curvetowire(e,(SegLen))))
+             geomType(e) == "BezierCurve" or \
+             geomType(e) == "Ellipse":
+            edgelist.append(Part.Wire(curvetowire(e,(SegLen))))
 
     newwire = Part.Wire(edgelist)
     if Side == 'Left':
